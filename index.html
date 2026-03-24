@@ -29,14 +29,19 @@
 <div class="box">
     <h1>💳 Payment Page</h1>
     <p>Amount: ₹500</p>
-    <button onclick="pay()">Pay Now</button>
+   <button onclick="pay()">Pay Now</button>
 </div>
 
 <script>
+f<script>
 function pay() {
+    // Show message
     alert("✅ Payment Successful!");
+
+    // Voice message
+    let msg = new SpeechSynthesisUtterance("Payment successful");
+
+    // Speak it
+    window.speechSynthesis.speak(msg);
 }
 </script>
-
-</body>
-</html>
