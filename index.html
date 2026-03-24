@@ -2,41 +2,24 @@
 <html>
 <head>
     <title>Payment Page</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial;
-            background-color: #f2f2f2;
-        }
-        .box {
-            margin-top: 100px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            display: inline-block;
-        }
-        button {
-            padding: 10px 20px;
-            background: green;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
 </head>
-<body>
+<body style="text-align:center; font-family:Arial; margin-top:100px;">
 
-<div class="box">
     <h1>💳 Payment Page</h1>
     <p>Amount: ₹500</p>
-    <button onclick="pay()">Pay Now</button>
-</div>
 
-<script>
-function pay() {
-    alert("✅ Payment Successful!");
-}
-</script>
+    <button onclick="pay()" style="padding:10px 20px; font-size:16px;">
+        Pay Now
+    </button>
+
+    <script>
+        function pay() {
+            alert("✅ Payment Successful!");
+
+            let msg = new SpeechSynthesisUtterance("Payment successful");
+            window.speechSynthesis.speak(msg);
+        }
+    </script>
 
 </body>
 </html>
